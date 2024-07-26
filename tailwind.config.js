@@ -18,38 +18,38 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "var(--border)", // Light Gray
+        input: "var(--input)", // Light Gray
+        ring: "var(--ring)", // Dark Blue
+        background: "var(--background)", // White
+        foreground: "var(--foreground)", // Dark Blue
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "var(--primary)", // Darker Blue
+          foreground: "var(--primary-foreground)", // Almost White
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "var(--secondary)", // Very Light Blue
+          foreground: "var(--secondary-foreground)", // Darker Blue
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "var(--destructive)", // Bright Red
+          foreground: "var(--destructive-foreground)", // Almost White
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "var(--muted)", // Very Light Blue
+          foreground: "var(--muted-foreground)", // Medium Blue
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "var(--accent)", // Very Light Blue
+          foreground: "var(--accent-foreground)", // Darker Blue
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "var(--popover)", // White
+          foreground: "var(--popover-foreground)", // Dark Blue
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "var(--card)", // White
+          foreground: "var(--card-foreground)", // Dark Blue
         },
       },
       borderRadius: {
@@ -71,7 +71,13 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'login-gradient': 'linear-gradient(85deg, #4a90e2, #9013fe)',
+      },
+      boxShadow: {
+        'primary-focus': '0 0 5px 2px var(--primary)', // Purple shadow
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
