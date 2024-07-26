@@ -1,14 +1,13 @@
 import "./App.css";
-import { Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button";
 function App() {
-  console.log("helo");
-
-  const a:INavItems ={ title: "Hello", link: "abc" }
   return (
     <>
-      <h1>Hello World</h1>
-      <Button variant={"link"}> {a?.title} </Button>
+      <div>
+        <Button variant={"destructive"}>Click me</Button>
+        <h1 className="text-3xl font-bold ">Hello world!</h1>
+        <h1 className={"text-5xl font-bold"}>Hello dsa!</h1>
+      </div>
     </>
   );
 }
