@@ -2,11 +2,12 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+
   prefix: "",
   theme: {
     container: {
@@ -72,10 +73,27 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        'login-gradient': 'linear-gradient(85deg, #4a90e2, #9013fe)',
+        "login-gradient": "linear-gradient(85deg, #4a90e2, #9013fe)",
       },
       boxShadow: {
-        'primary-focus': '0 0 5px 2px var(--primary)', // Purple shadow
+        "primary-focus": "0 0 5px 2px var(--primary)", // Purple shadow
+      },
+      fontFamily: {
+        sans: [
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          '"Noto Sans"',
+          '"Liberation Sans"',
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
       },
     },
   },

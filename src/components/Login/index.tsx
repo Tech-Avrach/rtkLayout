@@ -1,5 +1,5 @@
-// import React from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -11,9 +11,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-// import { Checkbox, Input, Label, Button } from "@/components/ui";
-import { Input, Button } from "@/components/ui";
-
+import { Input, Button, Checkbox } from "@/components/ui";
+import { Link, useNavigate } from "react-router-dom";
 // Define your form schema using Zod
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex =
@@ -31,18 +30,23 @@ const formSchema = z.object({
       message:
         "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character",
     }),
+  keepMeLoggedIn: z.boolean().optional(),
 });
+
 const Login = () => {
   // 1. Define your form.
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
       password: "",
+      keepMeLoggedIn: false,
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    navigate("/dashboard");
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
@@ -61,29 +65,50 @@ const Login = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>email</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="email" {...field} />
+                    <Input placeholder="Email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+            <div className="mb-4"></div>
             <FormField
               control={form.control}
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>password</FormLabel>
+                  <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input placeholder="password" {...field} />
+                    <Input placeholder="Password" type="password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <div className="flex items-center justify-between mt-4">
-              <Link to={""} className="text-primary hover:underline text-sm">
+            <div className="mb-4"></div>
+            <FormField
+              control={form.control}
+              name="keepMeLoggedIn"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <div>
+                      <Checkbox id="keepMeLoggedIn" />
+                      <FormLabel htmlFor="keepMeLoggedIn" className="ml-2">
+                        Keep me logged in
+                      </FormLabel>
+                    </div>
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+            <div className="flex items-center justify-between mt-6">
+              <Link
+                to="/forgot-password"
+                className="text-primary hover:underline text-sm"
+              >
                 Recover Password
               </Link>
               <Button type="submit" variant="default">
