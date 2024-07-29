@@ -23,6 +23,11 @@ module.exports = {
         ring: "var(--ring)", // Dark Blue
         background: "var(--background)", // White
         foreground: "var(--foreground)", // Dark Blue
+        component: "var(--component-background)",
+        hover: "var(--hover)",
+        backgroundSecondary: "var(--background-secondary)", // Dark Blue
+        foregroundSecondaryBackground: "var( --foreground-secondary-background)",
+        heading: "var(--heading)",
         primary: {
           DEFAULT: "var(--primary)", // Darker Blue
           foreground: "var(--primary-foreground)", // Almost White
@@ -75,7 +80,7 @@ module.exports = {
         'login-gradient': 'linear-gradient(85deg, #4a90e2, #9013fe)',
       },
       boxShadow: {
-        'primary-focus': '0 0 5px 2px var(--primary)', // Purple shadow
+        'primary-focus': '0 0 5px 2px var(--shadow)', // Purple shadow
       },
     },
   },
