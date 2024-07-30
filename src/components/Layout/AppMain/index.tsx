@@ -1,28 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import ProtectedRoutes from '@/routes/ProtectedRoutes'; 
+import PublicRoutes from '@/routes/PublicRoutes';
+
 import Layout from '@/components/Layout';
 import Login from '@/components/Login';
-// import ProtectedRoutes from '@/routes/ProtectedRoures'; 
 import ForgotPassword from '@/components/ForgotPassword';
-
+import Dashboard from '@/components/DashBoard';
+import ResetPassword from '@/components/ResetPassword';
 
 const AppMain: React.FC = () => {
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const navigate = useNavigate();
-
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     return (
         <div>
             <Routes>
-                {/* <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}> */}
-                    <Route path="/" element={<Layout />}>
+                <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
+                    <Route element={<Layout />}>
+                        <Route path="/dashboard" element={<Dashboard />} />
                     </Route>
-                {/* </Route> */}
+                </Route>
 
-                {/* <Route element={<publicRoutes isLoggedIn={isLoggedIn} />}> */}
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/forgot-password" element={<ForgotPassword />} />
-                {/* </Route> */}
+                <Route element={<PublicRoutes isLoggedIn={isLoggedIn} />}>
+                    <Route path="login" element={<Login />} />
+                    <Route path="forgot-password" element={<ForgotPassword />} />
+                    <Route path="reset-password" element={<ResetPassword />} />
+                    <Route path="/" element={<Login />} />
+                </Route>
             </Routes>
         </div>
     );

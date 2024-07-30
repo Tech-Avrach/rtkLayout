@@ -29,5 +29,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "src/components/DashBoard/PerformanceCard.tsx", "src/components/DashBoard/DataTable.tsx", "src/components/Layout/PageContainer.tsx"]
 }

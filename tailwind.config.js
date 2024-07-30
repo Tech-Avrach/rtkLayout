@@ -24,6 +24,7 @@ module.exports = {
         background: "var(--background)", // White
         foreground: "var(--foreground)", // Dark Blue
         component: "var(--component-background)",
+        containerCard: "var(--container-card)",
         hover: "var(--hover)",
         backgroundSecondary: "var(--background-secondary)", // Dark Blue
         foregroundSecondaryBackground: "var( --foreground-secondary-background)",

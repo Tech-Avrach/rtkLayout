@@ -58,7 +58,7 @@ const ForgotPassword = () => {
         />
         <div className="flex items-center justify-between mt-4 border-t pt-4 bg">
             <Link to={"/login"} className="text-primary hover:underline text-sm">Sign in with your exesting account</Link>
-            <Button type="submit" variant="default">Login to Dashboard</Button>
+            <Button type="submit" variant="default">Send Reset Code</Button>
           </div>
       </form>
     </Form>

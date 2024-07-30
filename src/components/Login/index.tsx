@@ -40,11 +40,11 @@ const Login = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values)
-    navigate('/')
+    navigate('/dashboard')
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-login-gradient">
+    <div className="flex items-center justify-center min-h-screen bg-login-gradient w-full">
       <div className="bg-background p-5 rounded-lg shadow-2xl max-w-lg w-full">
         <h2 className="mb-5 text-center text-xl">Please sign in to your account below.</h2>
         <Form {...form}>
