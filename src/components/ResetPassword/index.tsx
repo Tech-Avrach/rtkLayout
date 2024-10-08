@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useSearchParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as z from "zod";
 import {
   Form,
@@ -41,10 +41,8 @@ const formSchema = z
   });
 
 const ResetPassword = () => {
-  const [searchParams] = useSearchParams();
-  const token = searchParams.get("token");
 
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -54,7 +52,6 @@ const ResetPassword = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {}
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-login-gradient">
@@ -64,7 +61,7 @@ const ResetPassword = () => {
           Enter the new and confirm password to reset it.
         </h6>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <form >
             <FormField
               control={form.control}
               name="newPassword"

@@ -1,4 +1,3 @@
-// import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,7 +10,7 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
-// import { Checkbox, Input, Label, Button } from "@/components/ui";
+
 import { Checkbox, Input, Button } from "@/components/ui";
 
 // Define your form schema using Zod

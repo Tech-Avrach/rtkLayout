@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ProtectedRoutes from '@/routes/ProtectedRoutes'; 
 import PublicRoutes from '@/routes/PublicRoutes';
 
@@ -13,7 +13,7 @@ import UserList from '@/components/User/All';
 // import People from '@/components/Payments/DemoPage';
 
 const AppMain: React.FC = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const isLoggedIn = true;
 
     return (
         <div>

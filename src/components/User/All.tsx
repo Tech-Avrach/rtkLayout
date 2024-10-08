@@ -115,7 +115,7 @@ function All() {
           header: "Actions",
           id: "actions",
           cell: ({ row }) => {
-            const person = row.original;
+            console.log(row.original);
             return (
               <div className="flex gap-3">
                 <EyeIcon className="h-5 w-5 text-primary cursor-pointer"/>
@@ -158,7 +158,7 @@ function All() {
       date_of_birth: new Date(user.userInfo.date_of_birth).toLocaleDateString(),
     }));
   
-    let columns: IJsonSheet[] = [
+    const columns: IJsonSheet[] = [
       {
         sheet: "Users",
         columns: [
@@ -173,7 +173,7 @@ function All() {
       },
     ];
   
-    let settings = {
+    const settings = {
       fileName: "Users Excel", // Name of the Excel file
     };
   

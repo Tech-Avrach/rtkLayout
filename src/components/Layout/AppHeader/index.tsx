@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Sun, Moon, User, ChevronDown } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import UserBox from './UserBox';
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const [openUserBox, setOpenUserBox] = useState<boolean>(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
