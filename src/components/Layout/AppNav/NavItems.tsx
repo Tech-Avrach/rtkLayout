@@ -15,7 +15,7 @@ export const menus: MenuItem[] = [
     content: [
       { 
         label: "Add", 
-        to: "/user/add" 
+        to: "/" 
       },
       { 
         label: "List", 
@@ -34,15 +34,15 @@ export const menus: MenuItem[] = [
     content: [
       { 
         label: "Overview", 
-        to: "/analytics/overview" 
+        to: "/" 
       },
       { 
         label: "Reports", 
-        to: "/analytics/reports" 
+        to: "/" 
       },
       { 
         label: "Data", 
-        to: "/analytics/data" 
+        to: "/" 
       }
     ]
   },
