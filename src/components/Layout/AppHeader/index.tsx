@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Sun, Moon, User, ChevronDown } from 'lucide-react';
+import UserBox from './UserBox';
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [openUserBox, setOpenUserBox] = useState<boolean>(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -22,8 +24,7 @@ const Header = () => {
         </button>
         <div className="relative">
           <button className="flex items-center space-x-2 text-white focus:outline-none">
-            <User className="w-6 h-6" />
-            <ChevronDown className="w-4 h-4" />
+            <UserBox />
           </button>
           {/* Dropdown content (e.g., user settings) can be added here */}
         </div>

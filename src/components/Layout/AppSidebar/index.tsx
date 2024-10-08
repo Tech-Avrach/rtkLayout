@@ -92,11 +92,13 @@ const SideBar: React.FC<SideBarProps> = ({ menus }) => {
             {isMenuItemWithContent(menu) && open && (
               <div className={`flex flex-col pl-8 duration-200 overflow-hidden ${openSubMenu === menu.label ? "max-h-screen" : "max-h-0"}`}>
                 {menu.content.map((contentItem, j) => (
+                  <Link to={contentItem.to}>
                   <div className="mt-2 p-1.5 border-l-2 border-white hover:bg-hover" key={j}>
-                    <Link to={contentItem.to} className="text-gray-300 text-sm hover:text-white pb-2 pl-4 hover:rounded-md">
+                    <h3 className="text-gray-300 text-sm hover:text-white pt-1 pb-1 pl-4 hover:rounded-md">
                       {contentItem.label}
-                    </Link>
+                    </h3>
                   </div>
+                  </Link>
                 ))}
               </div>
             )}

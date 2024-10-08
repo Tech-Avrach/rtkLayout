@@ -1,7 +1,7 @@
 // import React from "react";
 import PageContainer from "@/components/Layout/PageContainer";
 import PerformanceSection from "@/components/DashBoard/PerformanceCard";
-import DataTable from "./DataTable";
+// import DataTable from "./DataTable";
 import { Home } from "lucide-react";
 import ContaierCard from "../ui/containerCard";
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
       <PerformanceSection />
       <ContaierCard>
         <h2 className="text-xl font-bold text-gray-900 dark:text-foreground mb-4">Draft Listings</h2>
-        <DataTable />
+        {/* <DataTable /> */}
       </ContaierCard>
     </PageContainer>
 

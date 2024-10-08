@@ -9,6 +9,9 @@ import ForgotPassword from '@/components/ForgotPassword';
 import Dashboard from '@/components/DashBoard';
 import ResetPassword from '@/components/ResetPassword';
 
+import UserList from '@/components/User/All';
+// import People from '@/components/Payments/DemoPage';
+
 const AppMain: React.FC = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(true);
 
@@ -18,6 +21,11 @@ const AppMain: React.FC = () => {
                 <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn} />}>
                     <Route element={<Layout />}>
                         <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path='user'>
+                            <Route path='list' element={<UserList />} />
+                        </Route>
+                    
+
                     </Route>
                 </Route>
 

@@ -6,7 +6,7 @@ import { MenuItem } from "@/@Typings/interface";
 export const menus: MenuItem[] = [
   { 
     label: "dashboard",
-    to: "/", 
+    to: "/dashboard", 
     icon: Grid 
   },
   { 

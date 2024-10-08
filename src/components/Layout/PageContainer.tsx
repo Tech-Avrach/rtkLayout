@@ -6,7 +6,7 @@ const PageContainer: React.FC<PageContainerProps> = ({ pageTitleIcon, pageHeadin
     <div className="p-6">
       <div className="mb-10 ">
         <div className="flex items-center space-x-4">
-          <div className="p-4 bg-component text-white rounded-md">
+          <div className="p-4 bg-component text-white rounded-md shadow-2xl shadow-black">
             {pageTitleIcon}
           </div>
           <div>
